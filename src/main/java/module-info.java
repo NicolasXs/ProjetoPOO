@@ -10,6 +10,7 @@ module com.example.dashboardcompany {
     requires eu.hansolo.tilesfx;
     requires java.desktop;
     requires java.sql;
+    requires mysql.connector.java;
 
     opens com.example.dashboardcompany to javafx.fxml;
     exports com.example.dashboardcompany;

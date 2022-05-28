@@ -30,9 +30,11 @@ public class Pessoa {
     public String getFone() {
         return fone;
     }
+
     public void setUrl(String u) {
         url = u;
     }
+
     public String getUrl() {
         return url;
     }

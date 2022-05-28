@@ -19,12 +19,6 @@ public class Controller {
     public Button btn_listar;
     public TextField c_digital1;
 
-    //Inicio - Mostrar erro de conexão com o banco de dados.
-//    @FXML
-//    private Label txtErro;
-
-
-    //Fim - Mostrar erro de conexão com o banco de dados.
 
     //Inicio - Radio Button Seleção de cargo.
     @FXML
@@ -63,6 +57,7 @@ public class Controller {
         log_cargo.setText(cargo.getText());
         log_nome.setText(c_nome.getText());
         log_entrada.setText("Horario entrada " + dtf4.format(LocalDateTime.now()));
+        //LOG
     }
 
     @FXML
@@ -77,7 +72,7 @@ public class Controller {
         DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         log_entrada.setText("Horario entrada " + dtf4.format(LocalDateTime.now()));
     }
-        //Fim - cadastro.
+    //Fim - cadastro.
 
     //    Inicio - LOG
     @FXML
@@ -86,4 +81,5 @@ public class Controller {
     private Label log_nome;
     @FXML
     private Label log_entrada;
+    //    Fim - LOG
 }

@@ -9,7 +9,7 @@ public class DAO_Pessoa {
 	private Connection conexao;
 
 	public DAO_Pessoa(){
-		conexao = new FabricaDeConexoes().solicitaConexao("localhost", "teste", "root", "");
+		conexao = new BDConexoes().solicitaConexao("localhost", "teste", "root", "");
 	}
 
 	public void insere(Pessoa p){
