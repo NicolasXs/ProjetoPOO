@@ -1,17 +1,24 @@
 package com.example.dashboardcompany;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Controller {
+    public Button btn_buscar2;
+    public Label txtErro;
+    public ImageView img_url;
+    public ToggleGroup Cargo;
+    public Button btn_buscar;
+    public Button btn_gravar;
+    public Button btn_alterar;
+    public Button btn_apagar;
+    public Button btn_listar;
+    public TextField c_digital1;
+
     //Inicio - Mostrar erro de conexão com o banco de dados.
 //    @FXML
 //    private Label txtErro;
@@ -79,12 +86,4 @@ public class Controller {
     private Label log_nome;
     @FXML
     private Label log_entrada;
-    @FXML
-    ImageView img_url;
-    Button myButton;
-
-    Image avatar = new Image(String.valueOf(getClass().getResourceAsStream("https://mudae.net/uploads/8675696/nYV4Axktn_y36zfSIzYM~FAvIhFz.png")));
-    public void displayImage() {
-        img_url.setImage(avatar);
-    }
 }
