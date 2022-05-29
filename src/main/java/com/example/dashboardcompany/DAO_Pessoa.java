@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DAO_Pessoa {
-	private Connection conexao;
+	private final Connection conexao;
 
 	public DAO_Pessoa(){
 		conexao = new BDConexoes().solicitaConexao("localhost", "teste", "root", "");
@@ -63,42 +63,43 @@ public class DAO_Pessoa {
 		}
 	}
 
-//	public void altera(Pessoa p){
-//
-//		String sql = "update pessoa set " +
-//				"nome=?, endereco=?, fone=? " +
-//				"where nome=?";
-//
-//		try{
-//			PreparedStatement stmt = conexao.prepareStatement(sql);
-//			stmt.setString(1,p.getNome());
-//			stmt.setString(2,p.getEndereco());
-//			stmt.setString(3,p.getFone());
-//			stmt.setString(4,p.getNome());
-//
-//			stmt.execute();
-//			stmt.close();
-//		} catch (SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+	public void altera(Pessoa p){
 
-//
-//	public void apaga(String n){
-//
-//		String sql = "delete from pessoa " +
-//				"where nome=?";
-//
-//		try{
-//			PreparedStatement stmt = conexao.prepareStatement(sql);
-//			stmt.setString(1,n);
-//
-//			stmt.execute();
-//			stmt.close();
-//		} catch (SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+		String sql = "update pessoa set " +
+				"nome=?, endereco=?, fone=?, url=? " +
+				"where nome=?";
+
+		try{
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setString(1,p.getNome());
+			stmt.setString(2,p.getEndereco());
+			stmt.setString(3,p.getFone());
+			stmt.setString(4,p.getUrl());
+			stmt.setString(5,p.getNome());
+
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	public void apaga(String f){
+
+		String sql = "delete from pessoa " +
+				"where fone=?";
+
+		try{
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setString(1,f);
+
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 //
 //	public List<Pessoa> lista(){
 //

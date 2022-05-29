@@ -72,8 +72,27 @@ public class Controller {
         c_digital.setText(p.getFone());
         img_url.setImage(new Image(p.getUrl()));
 
-        DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
-        log_entrada.setText("Horario entrada " + dtf4.format(LocalDateTime.now()));
+        DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        log_entrada.setText("Horario entrada " + dtf3.format(LocalDateTime.now()));
+    }
+
+    public void btnAlterar() {
+        p.setNome(c_nome.getText());
+        p.setEndereco(cargo.getText());
+        p.setFone(c_digital.getText());
+
+        c_nome.setText("");
+        cargo.setText("");
+        c_digital.setText("");
+
+        dp.altera(p);
+    }
+    public void btnApaga() {
+        dp.apaga(c_digital.getText());
+
+        c_nome.setText("");
+        cargo.setText("");
+        c_digital.setText("");
     }
     //Fim - cadastro.
 

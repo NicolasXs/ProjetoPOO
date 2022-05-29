@@ -101,7 +101,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button fx:id="btn_alterar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Alterar" textFill="WHITE">
+                        <Button fx:id="btn_alterar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnAlterar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Alterar" textFill="WHITE">
                             <effect>
                                 <Reflection />
                             </effect>
@@ -109,7 +109,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button fx:id="btn_apagar" layoutX="200.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Apagar" textFill="WHITE">
+                        <Button fx:id="btn_apagar" layoutX="200.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnApaga" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Apagar" textFill="WHITE">
                             <effect>
                                 <Reflection />
                             </effect>
