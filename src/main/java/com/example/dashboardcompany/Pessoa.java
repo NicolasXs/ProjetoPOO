@@ -1,5 +1,7 @@
 package com.example.dashboardcompany;
 
+import javafx.scene.image.Image;
+
 public class Pessoa {
 
     private String nome;

@@ -2,6 +2,7 @@ package com.example.dashboardcompany;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.time.LocalDateTime;
@@ -10,14 +11,12 @@ import java.time.format.DateTimeFormatter;
 public class Controller {
     public Button btn_buscar2;
     public Label txtErro;
-    public ImageView img_url;
     public ToggleGroup Cargo;
     public Button btn_buscar;
     public Button btn_gravar;
     public Button btn_alterar;
     public Button btn_apagar;
     public Button btn_listar;
-    public TextField c_digital1;
 
 
     //Inicio - Radio Button Seleção de cargo.
@@ -44,12 +43,15 @@ public class Controller {
     @FXML
     private TextField c_digital;
     @FXML
+    public TextField c_url;
+    @FXML
     private Label cargo;
 
     public void btnGravar() {
         p.setNome(c_nome.getText());
         p.setEndereco(cargo.getText());
         p.setFone(c_digital.getText());
+        p.setUrl(c_url.getText());
 
         dp.insere(p);
         //LOG
@@ -68,7 +70,8 @@ public class Controller {
         log_nome.setText(p.getNome());
         log_cargo.setText(p.getEndereco());
         c_digital.setText(p.getFone());
-//        img_url.setImage(avatar);
+        img_url.setImage(new Image(p.getUrl()));
+
         DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         log_entrada.setText("Horario entrada " + dtf4.format(LocalDateTime.now()));
     }
@@ -81,5 +84,10 @@ public class Controller {
     private Label log_nome;
     @FXML
     private Label log_entrada;
+    @FXML
+    private Label rt_url;
+    @FXML
+    ImageView img_url;
+
     //    Fim - LOG
 }

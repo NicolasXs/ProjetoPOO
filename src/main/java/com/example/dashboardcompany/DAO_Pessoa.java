@@ -16,13 +16,14 @@ public class DAO_Pessoa {
 
 		String sql = "insert into pessoa " +
 				"(nome, endereco, fone, url) " +
-				"values (?,?,?)";
+				"values (?,?,?,?)";
 
 		try{
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			stmt.setString(1,p.getNome());
 			stmt.setString(2,p.getEndereco());
 			stmt.setString(3,p.getFone());
+			stmt.setString(4,p.getUrl());
 
 			stmt.execute();
 			stmt.close();
@@ -31,22 +32,21 @@ public class DAO_Pessoa {
 		}
 	}
 
-	public Pessoa busca(String n){
+	public Pessoa busca(String f){
 
 		Pessoa p = new Pessoa();
 
 		try{
-			String sql = "select * from pessoa where nome like ?";
+			String sql = "select * from pessoa where fone like ?";
 			PreparedStatement stmt = conexao.prepareStatement(sql);
-			stmt.setString(1,"%" + n + "%");
+			stmt.setString(1,"%" + f + "%");
 
 			ResultSet rs = stmt.executeQuery();
 
 			p.setNome("Nao Encontrado!");
 
 			while(rs.next()){
-				//if(rs.getString("nome").equals(n)){
-				if(rs.getString("nome").contains(n)){
+				if(rs.getString("fone").contains(f)){
 					p.setNome(rs.getString("nome"));
 					p.setEndereco(rs.getString("endereco"));
 					p.setFone(rs.getString("fone"));

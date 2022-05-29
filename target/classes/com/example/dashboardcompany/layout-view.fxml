@@ -52,8 +52,10 @@
                     <Font size="15.0" />
                 </font>
             </Label>
-            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="https://pbs.twimg.com/media/FEQ96WnXwAEOhAH.jpg" />
+            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980199927969873950/85f7ef989006877907ed5abb9b503c9d.jpg" />
+            </image>
             </ImageView>
         </AnchorPane>
     </Tab>
@@ -126,7 +128,7 @@
                     </buttons>
                 </ButtonBar>
                 <Label layoutX="415.0" layoutY="75.0" text="Imagem:" textFill="WHITE" />
-                <TextField fx:id="c_digital1" layoutX="468.0" layoutY="71.0" prefHeight="25.0" prefWidth="209.0" promptText="Insira a Url:" />
+                <TextField fx:id="c_url" layoutX="468.0" layoutY="71.0" prefHeight="25.0" prefWidth="209.0" promptText="Insira a Url:" />
             </Pane>
             <Label layoutX="511.0" layoutY="14.0" text="Tela de Cadastro" textFill="WHITE">
                 <font>
