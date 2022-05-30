@@ -37,40 +37,39 @@
                     <Image url="https://www.almitec.com.br/doutor/uploads/2/produtos/2017/12/cover-leitor-biometrico-fingerscan-d-09e54b1514.png" />
                 </ImageView>
             </Pane>
-            <Label fx:id="log_cargo" layoutX="14.0" layoutY="226.0" prefHeight="42.0" prefWidth="82.0" text="Cargo:" textFill="#00f4ff">
+            <Label fx:id="log_cargo" layoutX="14.0" layoutY="226.0" prefHeight="42.0" prefWidth="82.0" text="Bem vindo!!" textFill="#00f4ff">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label fx:id="log_nome" layoutX="102.0" layoutY="226.0" prefHeight="42.0" prefWidth="178.0" text="Nome:" textFill="#00f4ff">
+            <Label fx:id="log_nome" layoutX="102.0" layoutY="226.0" prefHeight="42.0" prefWidth="178.0" textFill="#00f4ff">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label fx:id="log_entrada" layoutX="14.0" layoutY="276.0" prefHeight="42.0" prefWidth="268.0" text="Horario entrada:" textFill="#00f4ff">
+            <Label fx:id="log_entrada" layoutX="14.0" layoutY="276.0" prefHeight="42.0" prefWidth="268.0" textFill="#00f4ff">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980199927969873950/85f7ef989006877907ed5abb9b503c9d.jpg" />
-            </image>
+            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980540590372581446/unknown.png"/>
             </ImageView>
         </AnchorPane>
     </Tab>
     <Tab text="Tela 2">
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1A0826;">
-            <Pane layoutX="112.0" layoutY="133.0" prefHeight="366.0" prefWidth="1056.0">
-                <Label layoutX="419.0" layoutY="6.0" text="Nome:" textFill="WHITE">
+            <Pane layoutX="112.0" layoutY="189.0" prefHeight="366.0" prefWidth="1056.0">
+                <Label layoutX="425.0" layoutY="6.0" text="Nome:" textFill="WHITE">
 
                 </Label>
                 <TextField fx:id="c_nome" layoutX="468.0" layoutY="2.0" prefHeight="25.0" prefWidth="209.0" promptText="Digite seu nome:" />
-                <Label layoutX="420.0" layoutY="39.0" text="Digital:" textFill="WHITE">
+                <Label layoutX="424.0" layoutY="39.0" text="Digital:" textFill="WHITE">
 
                 </Label>
                 <TextField fx:id="c_digital" layoutX="468.0" layoutY="35.0" prefHeight="25.0" prefWidth="209.0" promptText="Numero para digital:" />
-                <Label layoutX="507.0" layoutY="104.0" text="Cargo:" textFill="WHITE">
+                <Label layoutX="519.0" layoutY="104.0" text="Cargo:" textFill="WHITE">
 
                 </Label>
                 <Separator layoutX="22.0" layoutY="258.0" prefHeight="0.0" prefWidth="1019.0" />
@@ -85,13 +84,16 @@
                 <Label fx:id="cargo" layoutX="8.0" layoutY="430.0" opacity="0.0" text="Label" textFill="WHITE" />
                 <ButtonBar layoutX="258.0" layoutY="154.0" prefHeight="92.0" prefWidth="600.0">
                     <buttons>
-                        <Button fx:id="btn_gravar" mnemonicParsing="false" onAction="#btnGravar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Gravar" textFill="WHITE">
+                        <Button fx:id="btn_gravar" mnemonicParsing="false" onAction="#btnGravar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Cadastrar" textFill="WHITE">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                             <effect>
-                                <Reflection />
+                        <Reflection />
                             </effect>
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
                         </Button>
                         <Button fx:id="btn_buscar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBuscar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Buscar" textFill="WHITE">
                             <effect>
@@ -100,6 +102,9 @@
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
                         </Button>
                         <Button fx:id="btn_alterar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnAlterar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Alterar" textFill="WHITE">
                             <effect>
@@ -108,6 +113,9 @@
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
                         </Button>
                         <Button fx:id="btn_apagar" layoutX="200.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnApaga" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Apagar" textFill="WHITE">
                             <effect>
@@ -116,6 +124,9 @@
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
+                     <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                     </font>
                         </Button>
                         <Button fx:id="btn_listar" layoutX="285.0" layoutY="18.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Listar" textFill="WHITE">
                             <effect>
@@ -124,13 +135,16 @@
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                         </Button>
                     </buttons>
                 </ButtonBar>
                 <Label layoutX="415.0" layoutY="75.0" text="Imagem:" textFill="WHITE" />
                 <TextField fx:id="c_url" layoutX="468.0" layoutY="71.0" prefHeight="25.0" prefWidth="209.0" promptText="Insira a Url:" />
             </Pane>
-            <Label layoutX="511.0" layoutY="14.0" text="Tela de Cadastro" textFill="WHITE">
+            <Label layoutX="511.0" layoutY="26.0" text="Tela de Cadastro" textFill="WHITE">
                 <font>
                     <Font name="Bernard MT Condensed" size="47.0" />
                 </font>

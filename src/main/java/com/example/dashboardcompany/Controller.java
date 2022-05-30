@@ -9,15 +9,25 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Controller {
-    public Button btn_buscar2;
-    public Label txtErro;
     public ToggleGroup Cargo;
+//    Buttons
     public Button btn_buscar;
+    public Button btn_buscar2;
     public Button btn_gravar;
     public Button btn_alterar;
     public Button btn_apagar;
     public Button btn_listar;
-
+    public Label txtErro;
+    //    Inicio - LOG
+    @FXML
+    private Label log_cargo;
+    @FXML
+    private Label log_nome;
+    @FXML
+    private Label log_entrada;
+    @FXML
+    ImageView img_url;
+    //    Fim - LOG
 
     //Inicio - Radio Button Seleção de cargo.
     @FXML
@@ -31,8 +41,6 @@ public class Controller {
         }
     }
     //Fim - Radio Button Seleção de cargo.
-
-
     //Inicio - cadastro.
 
     DAO_Pessoa dp = new DAO_Pessoa();
@@ -96,17 +104,4 @@ public class Controller {
     }
     //Fim - cadastro.
 
-    //    Inicio - LOG
-    @FXML
-    private Label log_cargo;
-    @FXML
-    private Label log_nome;
-    @FXML
-    private Label log_entrada;
-    @FXML
-    private Label rt_url;
-    @FXML
-    ImageView img_url;
-
-    //    Fim - LOG
 }

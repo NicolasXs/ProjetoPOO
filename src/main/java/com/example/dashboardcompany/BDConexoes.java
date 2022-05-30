@@ -13,14 +13,12 @@ public class BDConexoes {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             JOptionPane.showMessageDialog(null, "Driver nao encontrato. " + e);
-            System.exit(1);
         }
 
         try {
             return DriverManager.getConnection("jdbc:mysql://" + host + "/" + banco, usuario, senha);
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro com o banco de dados. \n" + e);
-            System.exit(1);
             return null;
         }
     }
