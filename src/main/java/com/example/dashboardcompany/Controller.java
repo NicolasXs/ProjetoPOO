@@ -7,10 +7,11 @@ import javafx.scene.image.ImageView;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Controller {
     public ToggleGroup Cargo;
-//    Buttons
+    //    Buttons
     public Button btn_buscar;
     public Button btn_buscar2;
     public Button btn_gravar;
@@ -60,14 +61,15 @@ public class Controller {
         p.setCargo(cargo.getText());
         p.setDigital(c_digital2.getText());
         p.setUrl(c_url.getText());
-
+        if (Objects.equals(p.getUrl(), "")) {
+            p.setUrl(null);
+        }
         dp.insere(p);
 
         c_nome.setText("");
         cargo.setText("");
         c_digital2.setText("");
         c_url.setText("");
-
     }
 
     @FXML
@@ -79,22 +81,23 @@ public class Controller {
         log_cargo.setText(p.getCargo());
         c_digital.setText(p.getDigital());
 
-        if (p.getUrl()!=null) {
+        if (p.getUrl() != null) {
             img_url.setImage(new Image(p.getUrl()));
-        }else{
+        } else {
             img_url.setImage(new Image("https://cdn.discordapp.com/attachments/903051081637044265/981065994569154591/unknown.png"));
         }
-
         DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         if (p.getEntrada() == null) {
             log_entrada.setText("Horario de entrada: " + dtf3.format(LocalDateTime.now()));
             p.setEntrada(log_entrada.getText());
-        }else{
+        } else {
             log_entrada.setText("Horario de saida: " + dtf3.format(LocalDateTime.now()));
             p.setSaida(log_entrada.getText());
-        } dp.altera(p);
+        }
+        dp.altera(p);
         c_digital.setText("");
     }
+
     public void btnBuscar2() {
         p = dp.busca(c_digital2.getText());
         c_digital.setText(p.getDigital());
@@ -118,6 +121,7 @@ public class Controller {
         c_url.setText("");
 
     }
+
     public void btnApaga() {
         dp.apaga(c_digital.getText());
 
@@ -126,20 +130,5 @@ public class Controller {
         c_digital2.setText("");
         c_url.setText("");
     }
-//    public void btnListar(){
-//        List<Pessoa> lista = new ArrayList<Pessoa>();
-//
-//        lista = dp.lista();
-//
-//        lText.setText("");
-//
-//        for(int i = 0; i < lista.size(); i++){
-//            lText.set("Nome:" + lista.get(i).getNome());
-//            lText.set("\nCargo:" + lista.get(i).getCargo());
-//            lText.set("\nDigital:" + lista.get(i).getDigital());
-//            lText.set("\n\n");
-//        }
-//    }
     //Fim - cadastro.
-
 }

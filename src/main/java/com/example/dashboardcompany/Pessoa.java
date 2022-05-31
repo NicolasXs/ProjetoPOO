@@ -44,6 +44,7 @@ public class Pessoa {
     public void setEntrada(String en) {
         entrada = en;
     }
+
     public String getEntrada() {
         return entrada;
     }
