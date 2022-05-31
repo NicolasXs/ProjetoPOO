@@ -6,6 +6,8 @@ public class Pessoa {
     private String cargo;
     private String digital;
     private String url;
+    private String entrada;
+    private String saida;
 
     public void setNome(String n) {
         nome = n;
@@ -37,5 +39,20 @@ public class Pessoa {
 
     public String getUrl() {
         return url;
+    }
+
+    public void setEntrada(String en) {
+        entrada = en;
+    }
+    public String getEntrada() {
+        return entrada;
+    }
+
+    public void setSaida(String sai) {
+        saida = sai;
+    }
+
+    public String getSaida() {
+        return saida;
     }
 }

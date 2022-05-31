@@ -15,8 +15,8 @@ public class DAO_Pessoa {
 	public void insere(Pessoa p){
 
 		String sql = "insert into pessoa " +
-				"(nome, cargo, digital, url) " +
-				"values (?,?,?,?)";
+				"(nome, cargo, digital, url, entrada, saida) " +
+				"values (?,?,?,?,?,?)";
 
 		try{
 			PreparedStatement stmt = conexao.prepareStatement(sql);
@@ -24,6 +24,9 @@ public class DAO_Pessoa {
 			stmt.setString(2,p.getCargo());
 			stmt.setString(3,p.getDigital());
 			stmt.setString(4,p.getUrl());
+			stmt.setString(5,p.getEntrada());
+			stmt.setString(6,p.getSaida());
+
 
 			stmt.execute();
 			stmt.close();
@@ -54,6 +57,8 @@ public class DAO_Pessoa {
 					p.setCargo(rs.getString("cargo"));
 					p.setDigital(rs.getString("digital"));
 					p.setUrl(rs.getString("url"));
+					p.setEntrada(rs.getString("entrada"));
+					p.setSaida(rs.getString("saida"));
 				}
 			}
 
@@ -69,7 +74,7 @@ public class DAO_Pessoa {
 	public void altera(Pessoa p){
 
 		String sql = "update pessoa set " +
-				"nome=?, cargo=?, digital=?, url=? " +
+				"nome=?, cargo=?, digital=?, url=?, entrada=?, saida=? " +
 				"where digital=?";
 
 		try{
@@ -78,7 +83,9 @@ public class DAO_Pessoa {
 			stmt.setString(2,p.getCargo());
 			stmt.setString(3,p.getDigital());
 			stmt.setString(4,p.getUrl());
-			stmt.setString(5,p.getDigital());
+			stmt.setString(5,p.getEntrada());
+			stmt.setString(6,p.getSaida());
+			stmt.setString(7,p.getDigital());
 
 			stmt.execute();
 			stmt.close();
@@ -103,7 +110,7 @@ public class DAO_Pessoa {
 			throw new RuntimeException(e);
 		}
 	}
-//
+
 //	public List<Pessoa> lista(){
 //
 //		try{
@@ -114,8 +121,8 @@ public class DAO_Pessoa {
 //			while(rs.next()){
 //				Pessoa p = new Pessoa();
 //				p.setNome(rs.getString("nome"));
-//				p.setEndereco(rs.getString("endereco"));
-//				p.setFone(rs.getString("fone"));
+//				p.setCargo(rs.getString("cargo"));
+//				p.setDigital(rs.getString("digital"));
 //
 //				pessoas.add(p);
 //			}
