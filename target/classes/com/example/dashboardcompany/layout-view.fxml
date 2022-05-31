@@ -37,7 +37,7 @@
                     <Image url="https://www.almitec.com.br/doutor/uploads/2/produtos/2017/12/cover-leitor-biometrico-fingerscan-d-09e54b1514.png" />
                 </ImageView>
             </Pane>
-            <Label fx:id="log_cargo" layoutX="14.0" layoutY="226.0" prefHeight="42.0" prefWidth="82.0" text="Bem vindo!!" textFill="#00f4ff">
+            <Label fx:id="log_cargo" layoutX="14.0" layoutY="226.0" prefHeight="42.0" prefWidth="82.0" textFill="#00f4ff">
                 <font>
                     <Font size="15.0" />
                 </font>
@@ -52,8 +52,9 @@
                     <Font size="15.0" />
                 </font>
             </Label>
-            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980540590372581446/unknown.png" />
+            <ImageView fx:id="img_url" fitHeight="119.0" fitWidth="180.0" layoutX="47.0" layoutY="64.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <Image url="https://cdn.discordapp.com/attachments/885737796944396341/981310228903653386/tenor.gif"/>
             </ImageView>
         </AnchorPane>
     </Tab>
