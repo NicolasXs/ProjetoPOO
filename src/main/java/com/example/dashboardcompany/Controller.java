@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Controller {
+    public Label txtErro;
     public ToggleGroup Cargo;
     //    Buttons
     public Button btn_buscar;
@@ -17,7 +18,6 @@ public class Controller {
     public Button btn_gravar;
     public Button btn_alterar;
     public Button btn_apagar;
-    public Label txtErro;
     //    Inicio - LOG
     @FXML
     private Label log_cargo;
