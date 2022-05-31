@@ -22,7 +22,7 @@
                         <Font name="Berlin Sans FB" size="22.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txt1" layoutX="615.0" layoutY="262.0" prefHeight="27.0" prefWidth="166.0" />
+                <TextField fx:id="c_digital" layoutX="615.0" layoutY="262.0" prefHeight="27.0" prefWidth="166.0" />
                 <Button fx:id="btn_buscar2" layoutX="515.0" layoutY="318.0" mnemonicParsing="false" onAction="#btnBuscar" prefHeight="48.0" prefWidth="216.0" style="-fx-background-color: #331673; -fx-background-radius: 25;" text="Start" textFill="WHITE">
                     <font>
                         <Font name="Berlin Sans FB" size="30.0" />
@@ -52,9 +52,8 @@
                     <Font size="15.0" />
                 </font>
             </Label>
-            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0"
-                       pickOnBounds="true" preserveRatio="true">
-                <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980540590372581446/unknown.png"/>
+            <ImageView fx:id="img_url" fitHeight="150.0" fitWidth="158.0" layoutX="69.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="https://cdn.discordapp.com/attachments/885737796944396341/980540590372581446/unknown.png" />
             </ImageView>
         </AnchorPane>
     </Tab>
@@ -68,18 +67,18 @@
                 <Label layoutX="424.0" layoutY="39.0" text="Digital:" textFill="WHITE">
 
                 </Label>
-                <TextField fx:id="c_digital" layoutX="468.0" layoutY="35.0" prefHeight="25.0" prefWidth="209.0" promptText="Numero para digital:" />
-                <Label layoutX="519.0" layoutY="104.0" text="Cargo:" textFill="WHITE">
+                <TextField fx:id="c_digital2" layoutX="468.0" layoutY="35.0" prefHeight="25.0" prefWidth="209.0" promptText="Numero para digital:" />
+                <Label layoutX="534.0" layoutY="104.0" text="Cargo:" textFill="WHITE">
 
                 </Label>
                 <Separator layoutX="22.0" layoutY="258.0" prefHeight="0.0" prefWidth="1019.0" />
-                <RadioButton fx:id="rButton1" layoutX="437.0" layoutY="132.0" mnemonicParsing="false" onAction="#addCargo" text="Professor(a):" textFill="WHITE">
+                <RadioButton fx:id="rButton1" layoutX="454.0" layoutY="132.0" mnemonicParsing="false" onAction="#addCargo" text="Professor(a):" textFill="WHITE">
 
                     <toggleGroup>
                         <ToggleGroup fx:id="Cargo" />
                     </toggleGroup>
                 </RadioButton>
-                <RadioButton fx:id="rButton2" layoutX="550.0" layoutY="132.0" mnemonicParsing="false" onAction="#addCargo" prefHeight="18.0" prefWidth="84.0" text="Aluno(a):" textFill="WHITE" toggleGroup="$Cargo">
+                <RadioButton fx:id="rButton2" layoutX="566.0" layoutY="132.0" mnemonicParsing="false" onAction="#addCargo" prefHeight="18.0" prefWidth="84.0" text="Aluno(a):" textFill="WHITE" toggleGroup="$Cargo">
                 </RadioButton>
                 <Label fx:id="cargo" layoutX="8.0" layoutY="430.0" opacity="0.0" text="Label" textFill="WHITE" />
                 <ButtonBar layoutX="258.0" layoutY="154.0" prefHeight="92.0" prefWidth="600.0">
@@ -95,7 +94,7 @@
                         <Font name="Berlin Sans FB" size="14.0" />
                      </font>
                         </Button>
-                        <Button fx:id="btn_buscar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBuscar" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Buscar" textFill="WHITE">
+                        <Button fx:id="btn_buscar" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#btnBuscar2" style="-fx-background-color: #8021BF; -fx-background-radius: 25;" text="Buscar" textFill="WHITE">
                             <effect>
                                 <Reflection />
                             </effect>

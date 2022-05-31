@@ -3,8 +3,8 @@ package com.example.dashboardcompany;
 public class Pessoa {
 
     private String nome;
-    private String endereco;
-    private String fone;
+    private String cargo;
+    private String digital;
     private String url;
 
     public void setNome(String n) {
@@ -15,20 +15,20 @@ public class Pessoa {
         return nome;
     }
 
-    public void setEndereco(String e) {
-        endereco = e;
+    public void setCargo(String c) {
+        cargo = c;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getCargo() {
+        return cargo;
     }
 
-    public void setFone(String f) {
-        fone = f;
+    public void setDigital(String d) {
+        digital = d;
     }
 
-    public String getFone() {
-        return fone;
+    public String getDigital() {
+        return digital;
     }
 
     public void setUrl(String u) {

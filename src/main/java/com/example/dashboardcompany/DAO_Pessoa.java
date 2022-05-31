@@ -15,14 +15,14 @@ public class DAO_Pessoa {
 	public void insere(Pessoa p){
 
 		String sql = "insert into pessoa " +
-				"(nome, endereco, fone, url) " +
+				"(nome, cargo, digital, url) " +
 				"values (?,?,?,?)";
 
 		try{
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			stmt.setString(1,p.getNome());
-			stmt.setString(2,p.getEndereco());
-			stmt.setString(3,p.getFone());
+			stmt.setString(2,p.getCargo());
+			stmt.setString(3,p.getDigital());
 			stmt.setString(4,p.getUrl());
 
 			stmt.execute();
@@ -37,19 +37,22 @@ public class DAO_Pessoa {
 		Pessoa p = new Pessoa();
 
 		try{
-			String sql = "select * from pessoa where fone like ?";
+//			String sql = "select * from pessoa where digital like ?";
+			String sql = "select * from pessoa where digital=?";
+
 			PreparedStatement stmt = conexao.prepareStatement(sql);
-			stmt.setString(1,"%" + f + "%");
+//			stmt.setString(1,"%" + f + "%");
+			stmt.setString(1,f);
 
 			ResultSet rs = stmt.executeQuery();
 
 			p.setNome("Nao Encontrado!");
 
 			while(rs.next()){
-				if(rs.getString("fone").contains(f)){
+				if(rs.getString("digital").contains(f)){
 					p.setNome(rs.getString("nome"));
-					p.setEndereco(rs.getString("endereco"));
-					p.setFone(rs.getString("fone"));
+					p.setCargo(rs.getString("cargo"));
+					p.setDigital(rs.getString("digital"));
 					p.setUrl(rs.getString("url"));
 				}
 			}
@@ -66,16 +69,16 @@ public class DAO_Pessoa {
 	public void altera(Pessoa p){
 
 		String sql = "update pessoa set " +
-				"nome=?, endereco=?, fone=?, url=? " +
-				"where nome=?";
+				"nome=?, cargo=?, digital=?, url=? " +
+				"where digital=?";
 
 		try{
 			PreparedStatement stmt = conexao.prepareStatement(sql);
 			stmt.setString(1,p.getNome());
-			stmt.setString(2,p.getEndereco());
-			stmt.setString(3,p.getFone());
+			stmt.setString(2,p.getCargo());
+			stmt.setString(3,p.getDigital());
 			stmt.setString(4,p.getUrl());
-			stmt.setString(5,p.getNome());
+			stmt.setString(5,p.getDigital());
 
 			stmt.execute();
 			stmt.close();
@@ -85,14 +88,14 @@ public class DAO_Pessoa {
 	}
 
 
-	public void apaga(String f){
+	public void apaga(String d){
 
 		String sql = "delete from pessoa " +
-				"where fone=?";
+				"where digital=?";
 
 		try{
 			PreparedStatement stmt = conexao.prepareStatement(sql);
-			stmt.setString(1,f);
+			stmt.setString(1,d);
 
 			stmt.execute();
 			stmt.close();

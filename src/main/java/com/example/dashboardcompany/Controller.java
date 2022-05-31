@@ -57,11 +57,17 @@ public class Controller {
 
     public void btnGravar() {
         p.setNome(c_nome.getText());
-        p.setEndereco(cargo.getText());
-        p.setFone(c_digital.getText());
+        p.setCargo(cargo.getText());
+        p.setDigital(c_digital2.getText());
         p.setUrl(c_url.getText());
 
         dp.insere(p);
+
+        c_nome.setText("");
+        cargo.setText("");
+        c_digital2.setText("");
+        c_url.setText("");
+
         //LOG
         DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm");
         log_cargo.setText(cargo.getText());
@@ -71,36 +77,53 @@ public class Controller {
     }
 
     @FXML
-    private TextField txt1;
+    private TextField c_digital2;
 
     public void btnBuscar() {
-        p = dp.busca(txt1.getText());
+        p = dp.busca(c_digital.getText());
         log_nome.setText(p.getNome());
-        log_cargo.setText(p.getEndereco());
-        c_digital.setText(p.getFone());
-        img_url.setImage(new Image(p.getUrl()));
+        log_cargo.setText(p.getCargo());
+        c_digital.setText(p.getDigital());
+
+        if (p.getUrl()!=null) {
+            img_url.setImage(new Image(p.getUrl()));
+        }else{
+            img_url.setImage(new Image("https://cdn.discordapp.com/attachments/903051081637044265/981065994569154591/unknown.png"));
+        }
+
 
         DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         log_entrada.setText("Horario entrada " + dtf3.format(LocalDateTime.now()));
+        c_digital.setText("");
+    }
+    public void btnBuscar2() {
+        p = dp.busca(c_digital2.getText());
+        c_digital.setText(p.getDigital());
+        c_nome.setText(p.getNome());
+        c_url.setText(p.getUrl());
     }
 
     public void btnAlterar() {
         p.setNome(c_nome.getText());
-        p.setEndereco(cargo.getText());
-        p.setFone(c_digital.getText());
+        p.setDigital(c_digital2.getText());
+        p.setCargo(cargo.getText());
+        p.setUrl(c_url.getText());
+
+        dp.altera(p);
 
         c_nome.setText("");
         cargo.setText("");
-        c_digital.setText("");
+        c_digital2.setText("");
+        c_url.setText("");
 
-        dp.altera(p);
     }
     public void btnApaga() {
         dp.apaga(c_digital.getText());
 
         c_nome.setText("");
         cargo.setText("");
-        c_digital.setText("");
+        c_digital2.setText("");
+        c_url.setText("");
     }
     //Fim - cadastro.
 
