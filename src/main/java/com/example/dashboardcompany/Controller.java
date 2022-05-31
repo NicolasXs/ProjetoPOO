@@ -17,7 +17,6 @@ public class Controller {
     public Button btn_gravar;
     public Button btn_alterar;
     public Button btn_apagar;
-    public Button btn_listar;
     public Label txtErro;
     //    Inicio - LOG
     @FXML
