@@ -14,6 +14,12 @@ Os atributos devem ser privados e a manipulação dos seus valores devem ser fei
 
 Construir uma classe para conexão do banco de dados e conseguir executar um CRUD em uma tabela do banco correspondente a um objeto modelado no minimundo escolhido pela equipe.
 
+### Trabalho desenvolvido utilizando:
+
+**IntelliJ - Scene Builder**
+
+**MySQL - phpMyAdmin**
+
 ##
 ### Tela 1
 ![image](https://user-images.githubusercontent.com/83989537/173171839-07eb9971-7179-443d-aff5-53e6456b701d.png)
