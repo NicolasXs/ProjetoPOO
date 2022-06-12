@@ -1,12 +1,12 @@
-# Trabalho em equipe | Programação Orientada a Objetos
+# Trabalho em equipe | Programação Orientada a Objetos.
 
-### Problema
+### Problema:
 
 Utilizando conceitos de Programação Orientada a Objetos, o grupo de até 4 alunos, deverá desenvolver uma um sistema de livre escolha para solucionar um problema específico a ser discutido em sala de aula.
 
 O programa deverá possuir mais de uma tela, receber inputs do usuário, processar a informação e entregar o resultado em tela.
 
-### Objetivo do trabalho
+### Objetivo do trabalho:
 
 Construir a interface gráfica para coleta de dados e preenchimento dos atributos dos objetos modelados no diagrama de classes.
 
