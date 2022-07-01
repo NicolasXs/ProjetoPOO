@@ -1,4 +1,4 @@
-# Trabalho em equipe | Programação Orientada a Objetos.
+# Trabalho em equipe | Programação Orientada a Objetos. 
 
 ### Problema:
 
